@@ -4,8 +4,8 @@ from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.graph_objects as go
 
-csv_path = "C:\\Users\\USER\\OneDrive\\Desktop\\data analysis\\Python\\tweetsplane\\Tweets.csv"
-df = pd.read_csv(csv_path)
+csv_url = "https://raw.githubusercontent.com/edgar595/flight-tweets/master/Tweets.csv"
+df = pd.read_csv(csv_url)
 
 # Group the DataFrame by the 'airline' column and count the flights for each airline
 airline_counts = df['airline'].value_counts().reset_index()
